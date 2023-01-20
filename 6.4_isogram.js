@@ -1,4 +1,4 @@
-const countDups = (str) => {
+const isIsogram = (str) => {
   str = str.toLowerCase();
   let counter = 0;
   for (let i = 0; i < str.length; i++) {
@@ -11,10 +11,8 @@ const countDups = (str) => {
       str.replace(str[i], " ");
     }
   }
-  return counter;
+  return counter === 0 ? true : false;
 };
 
-// console.log(countDups("invisibilities"));
-// console.log(countDups("acdc11"));
-// console.log(countDups("invisibility"));
-// console.log(countDups("disabled"));
+// console.log(isIsogram("aba"));
+// console.log(isIsogram("abc"));
