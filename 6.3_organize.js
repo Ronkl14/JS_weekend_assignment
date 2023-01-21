@@ -12,3 +12,10 @@ const organize = (str1, str2) => {
 
   return strNoDups.split("").sort().join("");
 };
+
+const organize2 = (str1, str2) =>
+  Array.from(new Set((str1 + str2).split("")))
+    .sort()
+    .join("");
+
+console.log(organize2("hgbdcba", "bcda"));
